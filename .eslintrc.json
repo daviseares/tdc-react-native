@@ -4,31 +4,36 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "prettier/react",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "airbnb"
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "ignorePatterns": ["node_modules, _templates"],
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
   "rules": {
-    "import/no-mutable-exports": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
     "import/prefer-default-export": "off",
-    "object-curly-newline": "off",
-    "no-unused-expressions": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
     "no-use-before-define": "off",
-    "camelcase": "off",
-    "no-nested-ternary": "off",
-    "no-useless-return": "off",
+    "no-undef": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-filename-extension": [
       1,
       {
