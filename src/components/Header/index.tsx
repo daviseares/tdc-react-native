@@ -7,7 +7,7 @@ type Props = {
 
 const Header: FC<Props> = ({ name }) => (
   <Wrapper>
-    <Title>{`Olá, ${name}`}</Title>
+    <Title>{`OLÁ, ${name}`}</Title>
   </Wrapper>
 );
 export default Header;
